@@ -1,27 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@import '@radix-ui/colors/olive.css';
+@import '@radix-ui/colors/grass.css';
+@import '@radix-ui/colors/tomato.css';
+@import '@radix-ui/colors/teal.css';
+@import '@radix-ui/colors/oliveDark.css';
+@import '@radix-ui/colors/grassDark.css';
+@import '@radix-ui/colors/tomatoDark.css';
+@import '@radix-ui/colors/tealDark.css';
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
+  /* Variables (Light) */
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --font-family:'inter', sans-serif;
+    --color-gray-1: var(--olive1);
+    --color-gray-2: var(--olive2);
+    --color-gray-3: var(--olive3);
+    --color-gray-4: var(--olive4);
+    --color-gray-5: var(--olive5);
+    --color-gray-6: var(--olive6);
+    --color-gray-7: var(--olive7);
+    --color-gray-8: var(--olive8);
+    --color-gray-9: var(--olive9);
+    --color-gray-10: var(--olive10);
+    --color-gray-11: var(--olive11);
+    --color-gray-12: var(--olive12);
+
+    --color-brand-1: var(--grass1);
+    --color-brand-2: var(--grass2);
+    --color-brand-3: var(--grass3);
+    --color-brand-4: var(--grass4);
+    --color-brand-5: var(--grass5);
+    --color-brand-6: var(--grass6);
+    --color-brand-7: var(--grass7);
+    --color-brand-8: var(--grass8);
+    --color-brand-9: var(--grass9);
+    --color-brand-10: var(--grass10);
+    --color-brand-11: var(--grass11);
+    --color-brand-12: var(--grass12);
+
+    --color-secondary-1: var(--teal1);
+    --color-secondary-2: var(--teal2);
+    --color-secondary-3: var(--teal3);
+    --color-secondary-4: var(--teal4);
+    --color-secondary-5: var(--teal5);
+    --color-secondary-6: var(--teal6);
+    --color-secondary-7: var(--teal7);
+    --color-secondary-8: var(--teal8);
+    --color-secondary-9: var(--teal9);
+    --color-secondary-10: var(--teal10);
+    --color-secondary-11: var(--teal11);
+    --color-secondary-12: var(--teal12);
+
+    --color-red-1: var(--tomato1);
+    --color-red-2: var(--tomato2);
+    --color-red-3: var(--tomato3);
+    --color-red-4: var(--tomato4);
+    --color-red-5: var(--tomato5);
+    --color-red-6: var(--tomato6);
+    --color-red-7: var(--tomato7);
+    --color-red-8: var(--tomato8);
+    --color-red-9: var(--tomato9);
+    --color-red-10: var(--tomato10);
+    --color-red-11: var(--tomato11);
+    --color-red-12: var(--tomato12);
+
+    color-scheme: light;
+  }
+
+  .dark-theme {
+    --color-gray-1: var(--olive1);
+    --color-gray-2: var(--olive2);
+    --color-gray-3: var(--olive3);
+    --color-gray-4: var(--olive4);
+    --color-gray-5: var(--olive5);
+    --color-gray-6: var(--olive6);
+    --color-gray-7: var(--olive7);
+    --color-gray-8: var(--olive8);
+    --color-gray-9: var(--olive9);
+    --color-gray-10: var(--olive10);
+    --color-gray-11: var(--olive11);
+    --color-gray-12: var(--olive12);
+
+    --color-brand-1: var(--grass1);
+    --color-brand-2: var(--grass2);
+    --color-brand-3: var(--grass3);
+    --color-brand-4: var(--grass4);
+    --color-brand-5: var(--grass5);
+    --color-brand-6: var(--grass6);
+    --color-brand-7: var(--grass7);
+    --color-brand-8: var(--grass8);
+    --color-brand-9: var(--grass9);
+    --color-brand-10: var(--grass10);
+    --color-brand-11: var(--grass11);
+    --color-brand-12: var(--grass12);
+
+    --color-secondary-1: var(--teal1);
+    --color-secondary-2: var(--teal2);
+    --color-secondary-3: var(--teal3);
+    --color-secondary-4: var(--teal4);
+    --color-secondary-5: var(--teal5);
+    --color-secondary-6: var(--teal6);
+    --color-secondary-7: var(--teal7);
+    --color-secondary-8: var(--teal8);
+    --color-secondary-9: var(--teal9);
+    --color-secondary-10: var(--teal10);
+    --color-secondary-11: var(--teal11);
+    --color-secondary-12: var(--teal12);
+
+    --color-red-1: var(--tomato1);
+    --color-red-2: var(--tomato2);
+    --color-red-3: var(--tomato3);
+    --color-red-4: var(--tomato4);
+    --color-red-5: var(--tomato5);
+    --color-red-6: var(--tomato6);
+    --color-red-7: var(--tomato7);
+    --color-red-8: var(--tomato8);
+    --color-red-9: var(--tomato9);
+    --color-red-10: var(--tomato10);
+    --color-red-11: var(--tomato11);
+    --color-red-12: var(--tomato12);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+
